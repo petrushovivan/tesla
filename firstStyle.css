@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: white;
+    font-family: 'Montserrat', 'Gotham SSm', Arial, sans-serif;
+}
+
+.firstPage {
+    background-image: url('source/firstImage.png');
+    background-size:cover;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.header {
+    font-weight: 14px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centerItems {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.teslaName {
+    padding-left: 32px;
+}
+
+.rightItems {
+    display: flex;
+    gap: 12px;
+    padding-right: 32px;
+}
+
+.modelS {
+    text-align: center;
+    margin: 109px;
+}
+
+.carInfo {
+    border: 2px red solid;
+    display: flex;
+    align-items: end;
+    height: 500px;
+}
