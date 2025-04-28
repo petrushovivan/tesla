@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="firstStyle.css">
+    <link rel="stylesheet" href="secondStyle.css">
+    <link rel="stylesheet" href="bottomMenuStyle.css">
 </head>
 
 <body>
+
+    <footer  class="bottomMenu">
+        <p>SomeText</p>
+    </footer>
 
 
     <!-- firstPage -->
@@ -52,7 +58,7 @@
 
         <div class="carInfo">
             <div class="range">
-                <h3>348 mi</h3>
+                <h3 class="value">348 mi</h3>
                 <p>Range (EPA est.)</p>
             </div>
             <div class="acceleration">
@@ -67,16 +73,33 @@
                 <h3>1,020 hp</h3>
                 <p>Peak Power</p>
             </div>
-            <form class="orderNow" action="https://www.tesla.com/models/design#overview">
-                <button>Order Now</button>
+        </div>
+
+        <div class="infoButtons">
+            <form action="https://www.tesla.com/models/design#overview">
+                <button class="orderNow">Order Now</button>
             </form>
 
             <form action="https://www.tesla.com/drive?selectedModel=models">
-                <button>Demo Drive</button>
+                <button class="demoDrive">Demo Drive</button>
             </form>
-
-
         </div>
+
+        <p class="modelSValue">Specs displayed are Model S Plaid values.</p>
+    </div>
+
+
+
+    <!-- SecondPage -->
+    <div class="secondPage">
+        <div>
+            <h2 class="futureInscription">Interior of the Future</h2>
+        </div>
+    </div>
+
+
+    <!-- thirdPage -->
+    <div class="thirdPage">
 
     </div>
 </body>

@@ -1,0 +1,14 @@
+.secondPage {
+    background-image: url("source/secondImage.png");
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+}
+
+.futureInscription {
+    margin-top: 0;
+    padding-top: 32px;
+    text-align: center;
+}
