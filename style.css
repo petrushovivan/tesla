@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* width: 100%; */
-    background-color: black;
+    background-color: white;
     color: white;
     font-family: 'Montserrat', 'Gotham SSm', Arial, sans-serif;
     overflow-x: hidden; 
@@ -23,7 +23,7 @@ body {
     min-width: 100vw;
 }
 
-.header {
+.firstPage .header {
     font-weight: 14px;
     padding-top: 2vh;     /* padding-top: 14px; */
     display: flex;
@@ -31,28 +31,28 @@ body {
     align-items: center;
 }
 
-.centerItems {
+.firstPage .centerItems {
     display: flex;
     gap: 4vh;/* gap: 32px; */
     align-items: center;
 }
 
-.teslaName {
+.firstPage .teslaName {
    padding-left: 3vw; /* padding-left: 32px; */
 }
 
-.rightItems {
+.firstPage .rightItems {
     display: flex;
     gap: 1.5vh; /* gap: 12px; */
     margin-right: 3vw; /* padding-right: 32px; */
 }
 
-.modelS {
+.firstPage .modelS {
     text-align: center;
     margin: 10vh;/* margin: 109px; */
 }
 
-.carInfo {
+.firstPage .carInfo {
     /* border: 2px red solid; */
     display: flex;
     height: 53vh;
@@ -62,12 +62,12 @@ body {
     text-align: center;
 }
 
-.infoButtons {
+.firstPage .infoButtons {
     display: flex;
     justify-content: center;
 }
 
-.orderNow {
+.firstPage .orderNow {
     color: white;
     background-color: rgb(76, 76, 226);
     width: 250px;
@@ -77,11 +77,11 @@ body {
     border: 0;
 }
 
-.orderNow:hover {
+.firstPage .orderNow:hover {
     cursor: pointer;
 }
 
-.demoDrive {
+.firstPage .demoDrive {
     width: 250px;
     height: 40px;
     margin-left: 15px;
@@ -89,11 +89,11 @@ body {
     border: 0;
 }
 
-.demoDrive:hover {
+.firstPage .demoDrive:hover {
     cursor: pointer;
 }
 
-.modelSValue {
+.firstPage .modelSValue {
     font-size: 12px;
     text-align: center;
 }
@@ -101,6 +101,7 @@ body {
 /* Second */
 
 .secondPage {
+    background-color: black;
     background-image: url("source/secondImage.png");
     min-height: 100vh;
     min-width: 100vw;
@@ -109,57 +110,369 @@ body {
     background-position: center;
 }
 
-.futureInscription {
+.secondPage .futureInscription {
     margin-top: 0;
     padding-top: 32px;
     text-align: center;
 }
 
-
-/* third */
+/* ThirdPage */
 .thirdPage {
-    text-align: center;
-}
-.thirdPageVideo {
-    margin-top: 12vh;
-    border: red 1px solid;
+    background-color: black;
+    padding: 4vh 0;
 }
 
-.videoPanel {
-    min-height: 15vh;
+.thirdPage .connectivity,
+.soundSystem,
+.storage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    margin: 4vh 25%; /* Отступы 25% слева и справа */
 }
 
-.underVideoInfo {
-    align-items: center;
+.thirdPage .carImage {
+    width: 115%; /* +15% от базового размера */
+    height: auto;
+    border-radius: 8px;
+    transform: translateX(-7.5%); /* Коррекция центрирования */
 }
 
-.rowImage {
-    size: 558px 313px;
+.thirdPage .textBlock {
+    color: white;
+    width: 115%; /* +15% от базового размера */
+    line-height: 1.6;
 }
 
-.row {
+.thirdPage .compareLink {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* FourthPage */
+.fourthPage {
+    background-color: white;
+    padding: 0;
+}
+
+.fourthPage .imageWithText {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.fourthPage .performanceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.fourthPage .statsContainer {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    width: 50%; /* Максимальная ширина 50% */
+    margin: 0 25%; /* Центрирование */
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    color: white;
 }
 
-.rowImage {
-    max-width: 85vw;
-    max-height: 35vh;
+.fourthPage .statItem {
+    text-align: center;
+    flex: 1; 
 }
-.rowText {
+
+.fourthPage .statItem h3 {
+    font-size: 1.5em; 
+    margin-bottom: 0.3em;
+}
+
+.fourthPage .statItem p {
+    font-size: 0.8em; 
+}
+
+/* FifthPage */
+.fifthPage {
+    background-color: white;
+    height: 25vh; /* 25% от высоты экрана */
+    display: flex;
+    padding-left: 20vw;
+    padding-right: 15vw;
+}
+
+.fifthPage .leftSection {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 2vw;
+}
+
+.fifthPage .rightSection {
+    width: 55%;
+    padding-left: 5%;
+    padding-top: 5vh;
+    line-height: 1.6;
+    color: #000;
     text-align: left;
 }
 
-/* buttom menu */
-
-.bottomMenu {
-    color: black;
-    position: fixed;
-    bottom: 0;  
-    left: 0;
-    right: 0;
-    height: 5.5vh;
-    background-color: white;
+.fifthPage .subtitle {
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
 }
 
+.fifthPage .leftSection h2 {
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 1.5vh;
+}
+
+.fifthPage .buttonGroup {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vh;
+}
+
+.fifthPage .orderNow,
+.compareModels {
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 2px solid transparent; /* Общая рамка */
+    min-width: 120px; /* Одинаковая минимальная ширина */
+    text-align: center;
+    box-sizing: border-box; /* Учитывает padding в ширине */
+}
+
+.fifthPage .orderNow {
+    background-color: white;
+    border: 2px solid #000; /* Чёрная рамка */
+}
+
+.fifthPage .compareModels {
+    background-color: #f5f5f5;
+    border: 2px solid transparent; /* Без рамки */
+}
+
+.fifthPage .link {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* SixthPage */
+.sixthPage {
+    color: black;
+    background-color: white;
+    padding: 6vh 5vw;
+    text-align: center;
+}
+
+.sixthPage .imageContainer {
+    margin: 4vh auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.sixthPage .chassisImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sixthPage .modelSelector {
+    display: flex;
+    justify-content: center;
+    gap: 8vw;
+    margin-top: 4vh;
+}
+
+.sixthPage .modelItem {
+    cursor: pointer;
+    padding: 2vh;
+    border-top: 3px solid #ccc; /* Серая линия для неактивных */
+    position: relative;
+    text-align: left;
+    color: #666; /* Серый цвет текста для неактивных блоков */
+}
+
+.sixthPage .modelItem.active {
+    border-top-color: #000; /* Чёрная линия для активного */
+    color: #000; /* Чёрный цвет текста для активного */
+}
+
+.sixthPage .modelItem::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: inherit; /* Унаследует цвет из border-top */
+}
+
+.sixthPage .modelItem h3 {
+    font-size: 1.4em;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    color: inherit; /* Наследует цвет из .modelItem */
+}
+
+.sixthPage .modelItem p {
+    line-height: 1.4;
+    margin-bottom: 2vh;
+    max-width: 400px;
+    margin: 0;
+    color: inherit; /* Наследует цвет из .modelItem */
+}
+
+.sixthPage .stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4vw;
+    margin-top: 2vh;
+}
+
+.sixthPage .stats div {
+    text-align: left;
+}
+
+.sixthPage .stats span:first-child {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 0.3em;
+    color: inherit; /* Наследует цвет из .modelItem */
+}
+
+.sixthPage .stats span:last-child {
+    font-size: 1em;
+    color: inherit; /* Наследует цвет из .modelItem */
+}
+
+/* SeventhPage */
+.seventhPage {
+    background-color: black;
+    padding: 0;
+}
+
+.seventhPage .carImage {
+    width: 100%;
+    height: 60vh; /* Высота 60% от экрана */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для акцента */
+}
+
+/* EighthPage */
+.eighthPage {
+    background-color: black;
+    padding-left: 20vw;
+    padding-right: 15vw;
+    color: white;
+}
+
+.eighthPage .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eighthPage .leftSection {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 2vw;
+}
+
+.eighthPage .rightSection {
+    width: 55%;
+    padding-left: 5%;
+    padding-top: 5vh;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+}
+
+.eighthPage .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.eighthPage .leftSection h2 {
+    font-size: 1.2em;
+    margin-bottom: 1.5vh;
+}
+
+.eighthPage .buttonGroup {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vh;
+}
+
+.eighthPage .orderNow,
+.demoDrive {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 2px solid transparent;
+    min-width: 120px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.eighthPage .orderNow {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.eighthPage .demoDrive {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+/* NinthPage */
+.ninthPage {
+    background-color: black;
+    padding: 4vh 0;
+}
+
+.performanceSection,
+.aerodynamicsSection,
+.stylingSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    margin: 4vh 25%; /* Отступы 25% слева и справа */
+}
+
+.carImage {
+    width: 115%; /* +15% от базового размера */
+    height: auto;
+    border-radius: 8px;
+    transform: translateX(-7.5%); /* Коррекция центрирования */
+}
+
+.textBlock {
+    color: white;
+    width: 115%; /* +15% от базового размера */
+    line-height: 1.6;
+}
