@@ -2,7 +2,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* width: 100%; */
     background-color: white;
     color: white;
     font-family: 'Montserrat', 'Gotham SSm', Arial, sans-serif;
@@ -82,6 +81,7 @@ body {
 }
 
 .firstPage .demoDrive {
+    color: black;
     width: 250px;
     height: 40px;
     margin-left: 15px;
@@ -116,15 +116,114 @@ body {
     text-align: center;
 }
 
+
+/* TwentyPage */
+.twentyPage {
+    background-color: black;
+    padding: 6vh 5vw;
+}
+
+.videoContainer {
+    position: relative;
+    height: 75vh; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.videoItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.videoItem.active {
+    display: block;
+}
+
+.videoItem video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pauseButton {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.pauseButton:hover {
+    opacity: 1;
+}
+
+.pauseButton svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: white;
+}
+
+.navigation {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+.textContainer {
+    margin-top: 4vh;
+    color: white;
+    text-align: center;
+}
+
+.text {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text.active {
+    display: block;
+}
+
+.text h3 {
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+}
+
+.text p {
+    line-height: 1.6;
+}
+
 /* ThirdPage */
 .thirdPage {
     background-color: black;
     padding: 4vh 0;
 }
 
-.thirdPage .connectivity,
-.soundSystem,
-.storage {
+.thirdPage .connectivity, .thirdPage .soundSystem, .thirdPage .storage {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4vw;
@@ -198,7 +297,7 @@ body {
 /* FifthPage */
 .fifthPage {
     background-color: white;
-    height: 25vh; /* 25% от высоты экрана */
+    height: 25vh; 
     display: flex;
     padding-left: 20vw;
     padding-right: 15vw;
@@ -240,8 +339,7 @@ body {
     margin-top: 1vh;
 }
 
-.fifthPage .orderNow,
-.compareModels {
+.fifthPage .orderNow, .fifthPage .compareModels {
     color: #000;
     font-weight: bold;
     font-size: 0.9em;
@@ -271,7 +369,7 @@ body {
 /* SixthPage */
 .sixthPage {
     color: black;
-    background-color: white;
+    background-color:#f0efef;
     padding: 6vh 5vw;
     text-align: center;
 }
@@ -425,8 +523,7 @@ body {
     margin-top: 1vh;
 }
 
-.eighthPage .orderNow,
-.demoDrive {
+.eighthPage .orderNow, .eighthPage .demoDrive {
     color: white;
     font-weight: bold;
     font-size: 0.9em;
@@ -455,24 +552,577 @@ body {
     padding: 4vh 0;
 }
 
-.performanceSection,
-.aerodynamicsSection,
-.stylingSection {
+.ninthPage .performanceSection,
+.ninthPage .aerodynamicsSection, .ninthPage .stylingSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4vw;
     margin: 4vh 25%; /* Отступы 25% слева и справа */
 }
 
-.carImage {
+.ninthPage .carImage {
     width: 115%; /* +15% от базового размера */
     height: auto;
     border-radius: 8px;
     transform: translateX(-7.5%); /* Коррекция центрирования */
 }
 
-.textBlock {
+.ninthPage .textBlock {
     color: white;
     width: 115%; /* +15% от базового размера */
     line-height: 1.6;
+}
+
+/* TenthPage */
+.tenthPage {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 2vw;
+    padding-left: 0;
+    height: 100vh;
+}
+
+.tenthPage .videoContainer {
+    position: relative;
+    height: 100%;
+}
+
+.tenthPage .videoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tenthPage .textContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: start; /* Выравнивание по левому краю */
+    overflow-y: auto; /* Прокрутка, если контент длинный */
+}
+
+.tenthPage .rangeInfo {
+    color: #333;
+    line-height: 1.6;
+    max-width: 90%; /* Ограничение ширины для безопасности */
+}
+
+.tenthPage .rangeInfo h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.tenthPage .rangeInfo h2 {
+    font-size: 1.8em;
+    margin-bottom: 1.5vh;
+}
+
+.tenthPage .buttonGroup {
+    padding-top: 50vh;
+    min-width: 15vw;
+    display: flex;
+    flex-direction: column; /* Кнопки друг под другом */
+    gap: 1vw;
+}
+
+.tenthPage .orderNow, .tenthPage .findRoute {
+    color: #333;
+    background-color: white;
+    border: 2px solid #333;
+    padding: 12px 24px;
+    border-radius: 0;
+    font-weight: bold;
+    width: 100%; /* На всю ширину колонки */
+}
+
+.tenthPage .findRoute {
+    background-color: transparent;
+    border-color: #333;
+}
+.tenthPage .rangeInfo a {
+    color: #000; /* Чёрный цвет ссылок */
+
+
+}
+
+/* EleventhPage */
+.eleventhPage {
+    background-color: white;
+    padding: 6vh 5vw;
+}
+
+.eleventhPage .header {
+    margin-bottom: 4vh;
+    text-align: left; /* Выравнивание по левому краю */
+    max-width: 600px; /* Ограничение ширины для текста */
+    padding-left: 4vw; /* Небольшой отступ от левой границы */
+}
+
+.eleventhPage .header h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
+.eleventhPage .header p {
+    color: #666;
+    line-height: 1.6;
+    white-space: nowrap; /* Текст в одну строку */
+    text-overflow: ellipsis; /* Добавление многоточия при переполнении */
+}
+
+.eleventhPage .mapContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.eleventhPage .mapImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.eleventhPage .buttonContainer {
+    margin-top: 4vh; /* Отступ от карты */
+    text-align: center; /* Центрирование кнопки */
+}
+
+.eleventhPage .learnMore {
+    margin-top: 10vh;
+    color: #333;
+    background-color: white;
+    border: 2px solid #333;
+    padding: 10px 40px;
+    border-radius: 0;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Анимация при наведении */
+}
+
+
+/* TwelfthPage */
+.twelfthPage {
+    background-color: white;
+    padding: 6vh 5vw;
+}
+
+.twelfthPage .contentContainer {
+    display: grid;
+    grid-template-columns: 55% 45%; /* Левая колонка 55%, правая 45% */
+    gap: 2vw;
+    align-items: flex-start; /* Вертикальное центрирование */
+    padding-right: 10vh;
+}
+
+.twelfthPage .formSection {
+    text-align: center; /* Центрирование всего содержимого */
+}
+
+.twelfthPage .formSection h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
+.twelfthPage .formSection p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2vh;
+}
+
+.twelfthPage .searchBox {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: white;
+    width: 50%; /* Уменьшено в 2 раза */
+    margin: 0 auto; /* Центрирование */
+}
+
+.twelfthPage .searchBox svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+}
+
+.twelfthPage .searchBox input {
+    width: 100%;
+    padding-left: 40px; /* Пространство для иконки */
+    border: none;
+    outline: none;
+    font-size: 1em;
+    text-align: left; /* Текст внутри поля — по левому краю */
+}
+
+.twelfthPage .nextButton {
+    background-color: #e6e6ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2vh auto 0; /* Центрирование кнопки */
+    transition: all 0.3s ease;
+    width: 50%; /* Уменьшено в 2 раза */
+}
+
+.twelfthPage .imageSection {
+    display: flex;
+    justify-content: flex-end; /* Изображение прижато к правому краю */
+}
+
+.twelfthPage .carImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ThirteenthPage */
+.thirteenthPage {
+    background-color: white;
+    padding: 6vh 5vw;
+}
+
+.thirteenthPage .contentContainer {
+    display: grid;
+    grid-template-columns: 40% 60%; /* Левая колонка 40%, правая 60% */
+    gap: 4vw;
+    align-items: flex-start; /* Вертикальное центрирование */
+}
+
+.thirteenthPage .textSection {
+    text-align: left;
+    padding-bottom: 10vh;
+}
+
+.thirteenthPage .textSection h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
+.thirteenthPage .textSection p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 4vh;
+}
+
+.thirteenthPage .buttonGroup {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.thirteenthPage .orderNow, .thirteenthPage .demoDrive {
+    color: #333;
+    background-color: white;
+    border: 2px solid #333;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    max-width: 15vw;
+    transition: all 0.3s ease;
+}
+
+
+.thirteenthPage .demoDrive {
+    background-color: transparent;
+    background-color: #c0bfbf;
+    border: 0;
+}
+
+.thirteenthPage .imageSection {
+    position: relative; /* Для абсолютного позиционирования аннотаций */
+    padding-right: 10vw;
+}
+
+.thirteenthPage .carImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.thirteenthPage  .front {
+    top: 20%;
+    left: 15%;
+}
+
+.thirteenthPage .front .line {
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.thirteenthPage .side {
+    top: 30%;
+    right: 15%;
+}
+
+.thirteenthPage .side .line {
+    height: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.thirteenthPage .rollover {
+    bottom: 20%;
+    right: 15%;
+}
+
+.thirteenthPage .rollover .line {
+    height: 20%;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+
+/* FifteenthPage */
+.fifteenthPage {
+    background-color: white;
+    padding-left: 20vw;
+    padding-right: 15vw;
+    color: black;
+}
+
+.fifteenthPage .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fifteenthPage .leftSection {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 2vw;
+}
+
+.fifteenthPage .rightSection {
+    width: 55%;
+    padding-left: 5%;
+    padding-top: 5vh;
+    line-height: 1.6;
+    color: black;
+    text-align: left;
+}
+
+.fifteenthPage .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.fifteenthPage .leftSection h2 {
+    font-size: 1.2em;
+    margin-bottom: 1.5vh;
+}
+
+.fifteenthPage .buttonGroup {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vh;
+}
+
+.fifteenthPage .orderNow, .fifteenthPage .demoDrive {
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 2px solid transparent;
+    min-width: 120px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.fifteenthPage .orderNow {
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+}
+
+.fifteenthPage .demoDrive {
+    background-color: rgb(221, 221, 221);
+    border: 0;
+}
+
+/* pageSixteen */
+ .pageSixteen {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pageSixteen .features-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .pageSixteen .header h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .pageSixteen .header p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .pageSixteen .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .pageSixteen .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pageSixteen .feature-blocks {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .pageSixteen .block {
+      display: flex;
+      flex-direction: column;
+      width: 23%;
+      padding: 20px;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .pageSixteen .block hr {
+      border: none;
+      border-top: 1px solid #000;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .pageSixteen .block h2 {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0 0 10px 0;
+    }
+
+    .pageSixteen .block p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .pageSixteen .block.selected h2,
+    .pageSixteen .block.selected p {
+      color: #000;
+    }
+
+    .pageSixteen .block:not(.selected) h2,
+    .pageSixteen .block:not(.selected) p {
+      color: #666;
+    }
+
+
+
+/* 18 page */
+.eighteenthPage {
+    background-image: 
+        linear-gradient(
+            to top, 
+            rgba(0, 0, 0, 0.2) 15%, 
+            transparent 100%
+        ),
+        url('source/Model-S-End-of-Page-Desktop.avif');
+    background-size:cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.eighteenthPage  .someText {
+    padding-top: 83vh;
+    text-align: center;
+}
+
+.eighteenthPage .infoButtons {
+    display: flex;
+    /* padding-top: 80vh; */
+    justify-content: center;
+}
+
+.eighteenthPage .orderNow {
+    color: white;
+    background-color: rgb(76, 76, 226);
+    width: 250px;
+    height: 40px;
+    margin-right: 15px;
+       border: 0;
+}
+
+.eighteenthPage .orderNow:hover {
+    cursor: pointer;
+}
+
+.eighteenthPage .demoDrive {
+    color: white;
+    background-color: #666;
+    width: 250px;
+    height: 40px;
+    margin-left: 15px;
+    border: 0;
+}
+
+.eighteenthPage .demoDrive:hover {
+    cursor: pointer;
+}
+
+
+
+.footer {
+    background-color: black;
+    font-size: 1.3vh;
+    padding: 4vh 5vw;
+    text-align: center;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
