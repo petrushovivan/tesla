@@ -644,6 +644,92 @@ body {
 
 }
 
+/* TwentyOnePage */
+.twentyOnePage {
+    background-color: white;
+    padding: 6vh 5vw;
+}
+
+.mapContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mapImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.route {
+    position: absolute;
+    pointer-events: none; /* Не мешает взаимодействию с картой */
+    display: none;
+}
+
+.route.active {
+    display: block;
+}
+
+.distance {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.marker.start {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.marker.end {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.routes {
+    color: black;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 4vh;
+}
+
+.routeItem {
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 12px;
+    position: relative;
+} 
+
+.title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.mileage {
+    color: #666;
+    font-size: 0.9em;
+}
+
 /* EleventhPage */
 .eleventhPage {
     background-color: white;

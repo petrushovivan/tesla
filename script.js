@@ -123,3 +123,32 @@ document.addEventListener('DOMContentLoaded', function () {
     // Инициализация
     switchVideo(0);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const routeItems = document.querySelectorAll('.routeItem');
+    const routes = document.querySelectorAll('.route');
+
+    function switchRoute(event) {
+        // Сбрасываем активные классы
+        routeItems.forEach(item => item.classList.remove('active'));
+        routes.forEach(route => route.classList.remove('active'));
+
+        // Получаем ID маршрута
+        const routeId = event.target.dataset.route;
+        const activeRoute = document.querySelector(`.route[data-route="${routeId}"]`);
+
+        if (activeRoute) {
+            activeRoute.classList.add('active');
+            event.target.classList.add('active');
+        }
+    }
+
+    // Добавляем обработчики событий
+    routeItems.forEach(item => {
+        item.addEventListener('click', switchRoute);
+    });
+
+    // Инициализация — активируем первый маршрут
+    routeItems[0].classList.add('active');
+    routes[0].classList.add('active');
+});
